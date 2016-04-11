@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="my_bool">true</bool>
+
+    <string name="my_string">tekst</string>
+
+    <color name="my_color">#fff</color>
+
+    <dimen name="my_dimen">16dp</dimen>
+
+</resources>
