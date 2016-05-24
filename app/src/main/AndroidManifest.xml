@@ -3,6 +3,7 @@
     package="compumoprojekt.httpsgithub.studonotatnik">
     //Zezwolenie na uzytkowanie zewnetrznego urzadzenia
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
 

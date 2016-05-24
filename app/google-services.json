@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_id": "studonotatnik2",
+    "project_number": "283652479706",
+    "name": "StudoNotatnik2"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283652479706:android:da9e08426d63dedb",
+        "client_id": "android:compumoprojekt.httpsgithub.studonotatnik",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "compumoprojekt.httpsgithub.studonotatnik",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283652479706-sp85sml32kcqcqd6j1fnb16fjq0667un.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "compumoprojekt.httpsgithub.studonotatnik",
+            "certificate_hash": "764B17BBE645949A19729A5083137BA675D92D74"
+          }
+        },
+        {
+          "client_id": "283652479706-ggbv9lfkvhq64ae28r3mbt4ih4dkusie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283652479706-ggbv9lfkvhq64ae28r3mbt4ih4dkusie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

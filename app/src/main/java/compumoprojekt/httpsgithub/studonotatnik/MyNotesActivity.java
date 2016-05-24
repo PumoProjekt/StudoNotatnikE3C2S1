@@ -1,38 +1,23 @@
 package compumoprojekt.httpsgithub.studonotatnik;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.view.MotionEvent;
+
+import com.onegravity.rteditor.RTEditText;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
-import com.onegravity.rteditor.RTEditText;
-import com.onegravity.rteditor.RTManager;
-import com.onegravity.rteditor.RTToolbar;
-import com.onegravity.rteditor.api.RTApi;
-import com.onegravity.rteditor.api.RTMediaFactoryImpl;
-import com.onegravity.rteditor.api.RTProxyImpl;
-import com.onegravity.rteditor.api.format.RTFormat;
-import com.onegravity.rteditor.media.MediaUtils;
 
 public class MyNotesActivity extends AppCompatActivity {
 
@@ -41,6 +26,8 @@ public class MyNotesActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager myLayoutManager;
     MyAdapter adapter;
     LinearLayout optionsClicker;
+    TextView secondLine;
+    RTEditText secondLineRTE;
 
 
     @Override
@@ -109,10 +96,12 @@ public class MyNotesActivity extends AppCompatActivity {
 
             BufferedReader bufferedReader = null;
             try {
-                bufferedReader = new BufferedReader(new FileReader(context.getFilesDir().getPath()+"/note.txt"));
+                bufferedReader = new BufferedReader(new FileReader(context.getFilesDir().getPath()+"/note.json"));
                 String line;
                 while ((line=bufferedReader.readLine()) != null){
+                    //secondLineRTE.setRichTextEditing(true, line);
                     dataArray.add(line);
+
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -126,6 +115,8 @@ public class MyNotesActivity extends AppCompatActivity {
                 }
 
             }
+
+
 
 
         }
@@ -142,7 +133,9 @@ public class MyNotesActivity extends AppCompatActivity {
         public void onBindViewHolder(MyViewHolder holder, int position) {
             holder.firstLine.setText("Notatka" + position);
             //holder.secondLine.setText();
-            holder.secondLine.setText(dataArray.get(position));
+            holder.secondLine.setText(Html.fromHtml(dataArray.get(position)));
+
+
         }
 
         @Override
